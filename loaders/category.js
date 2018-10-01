@@ -15,7 +15,7 @@ function walkDir(cateName, catePath, entry, prefix){
             return {
                 name: n,
                 path: path,
-                cate: cateName,
+                cate: catePath,
                 isDir: isDir
             }
         })
