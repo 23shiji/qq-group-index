@@ -1,10 +1,15 @@
-export interface GroupInfo{
+export interface GroupInfoBase{
     name:   string
-    number: number
-    url:    string
     category:   string
     tags:       string[]
+}
+export interface GroupInfo extends GroupInfoBase{
+    number: number
+    url:    string
     description?: string
+}
+export interface GroupIndex extends GroupInfoBase{
+    src: string
 }
 export interface Category{
     name:   string
