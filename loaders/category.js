@@ -33,16 +33,21 @@ function walkDir(cateName, catePath, entry, prefix, fullPath, loaderPath) {
         .map( e => {
           return Promise.all([
             new Promise((resolve, reject) =>{
-              return this.loadModule(
-                '../loaders/group.js!yaml-loader!'+fullPath(e.path),
+              let url = '../loaders/group.js!yaml-loader!'+fullPath(e.path)
+              this.resolve(
+                url,
                 (err, source) => 
                 err ?
                   reject(err) :
-                  resolve(JSON.parse(source)))}),
-            new Promise((resolve, reject) => this.loadModule(
-              fullPath(e.path),
-              (err, source) => 
-              err ? reject(err) : resolve(source)))
+                  resolve(JSON.parse(source)))
+            }),
+            new Promise((resolve, reject) =>{
+              let url = fullPath(e.path)
+              this.resolve(
+                url,
+                (err, source) => 
+                err ? reject(err) : resolve(source))
+              })
           ]).then(([{name, tags}, src]) => {
             return {
               name,
