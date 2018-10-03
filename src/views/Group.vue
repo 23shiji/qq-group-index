@@ -33,7 +33,6 @@ export default class Group extends Vue {
     return this.$store.state.currentGroup
   }
   updateGroup(){
-    console.log(23333)
     this.$store.dispatch('updateGroup', this.id)
   }
   mounted(){

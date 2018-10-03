@@ -10,7 +10,7 @@
       template(v-for="g in groups")
         group-info(:group="g")
     .category-container
-      .category-info(v-for="c in node.children")
+      template(v-for="c in node.children")
         category-node(:node.sync="c")
 </template>
 
@@ -19,8 +19,8 @@ import {Category} from '../data'
 import GroupInfo from '@/components/GroupInfo.vue'
 import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component({
+  name: 'category-node',
   components:{
-    CategoryNode,
     GroupInfo
   }
 })

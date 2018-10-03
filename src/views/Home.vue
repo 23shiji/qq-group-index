@@ -14,5 +14,8 @@ import CategoryNode from '@/components/CategoryNode.vue'
   
 })
 export default class Home extends Vue {
+  created(){
+    console.log(this.$store.state.tree)
+  }
 }
 </script>

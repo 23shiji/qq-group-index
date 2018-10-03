@@ -1,6 +1,6 @@
 module.exports = {
   baseUrl: process.env.NODE_ENV === 'production'
-    ? '/qq-group-index/'
+    ? '' //'/qq-group-index/'
     : '/',
   configureWebpack: function(config){
     config.module.rules.push(
