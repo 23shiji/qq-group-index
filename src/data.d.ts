@@ -20,7 +20,7 @@ export interface Category{
 }
 export interface TagInfo{
     name: string
-    categories: number[]
+    groups: number[]
 }
 export interface Index{
     tree: Category,

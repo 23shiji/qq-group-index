@@ -36,10 +36,10 @@ export default class Group extends Vue {
     console.log(23333)
     this.$store.dispatch('updateGroup', this.id)
   }
-  mounted(next){
+  mounted(){
     this.updateGroup()
   }
-  beforeRouterUpdate(to, from, next){
+  beforeRouterUpdate(to: Object, from: Object, next: Function){
     this.updateGroup()
     next()
   }

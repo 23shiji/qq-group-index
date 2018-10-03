@@ -27,7 +27,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class CategoryNode extends Vue {
   @Prop() private node!: Category;
   @Prop({default: false}) private expanded!: boolean;
-  @Prop({default: false}) private frozen: boolean;
+  @Prop({default: false}) private frozen!: boolean;
   expandedStatus: boolean = false
   created(){
     this.expandedStatus = this.expanded

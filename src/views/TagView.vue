@@ -25,7 +25,7 @@ export default class TagView extends Vue {
   get tag(): TagInfo{
     return this.$store.getters.getTagInfo(this.name)
   }
-  get groups(): GroupIndex{
+  get groups(): GroupIndex[]{
     return this.tag.groups.map(id => this.$store.getters.getGroupIndex(id))
   }
 }
