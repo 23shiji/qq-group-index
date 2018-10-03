@@ -9,4 +9,7 @@ new Vue({
   router,
   store,
   render: (h) => h(App),
+  mounted(){
+    this.$store.dispatch('updateIndex')
+  }
 }).$mount('#app');

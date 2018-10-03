@@ -1,20 +1,18 @@
 <template lang="pug">
 .home
-  pre {{data}}
+  category-node(:node.sync="$store.state.tree", :expanded="true", :frozen="true")
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-import data from '@/dataEntry'
-
+import CategoryNode from '@/components/CategoryNode.vue'
 
 @Component({
   components: {
-    HelloWorld,
+    CategoryNode,
   },
+  
 })
 export default class Home extends Vue {
-  data = data
 }
 </script>
