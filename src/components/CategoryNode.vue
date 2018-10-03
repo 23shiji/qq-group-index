@@ -12,8 +12,6 @@
     .category-container
       .category-info(v-for="c in node.children")
         category-node(:node.sync="c")
-    .group-info(v-for="{name, number} in groups")
-      p {{name}}({{number}})
 </template>
 
 <script lang="ts">

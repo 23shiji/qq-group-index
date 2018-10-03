@@ -14,7 +14,6 @@ import GroupInfo from '@/components/GroupInfo.vue'
   components: {
     GroupInfo
   },
-  
 })
 export default class TagView extends Vue {
   mounted(){

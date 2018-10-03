@@ -50,7 +50,7 @@ function fileToGroup(e, index, tags){
 }
 function walkDir(cateName, catePath, entry, prefix, index, tags, fullPath, loaderPath) {
   // console.log(cateName)
-  const files = fs.readdirSync(fullPath(entry)).map((n) => {
+  const files = fs.readdirSync(fullPath(entry)).sort().map((n) => {
     let path = Path.join(entry, n)
     let cate = getRealPath(path, prefix)
     let rpath = fullPath(path)
