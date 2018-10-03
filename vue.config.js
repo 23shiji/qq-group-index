@@ -11,11 +11,6 @@ module.exports = {
     sourceMap: false
   },
   configureWebpack: function(config){
-    // Object.assign(config.entry,{
-    //   vendors: [
-    //       // "webpack-material-design-icons"
-    //   ]
-    // })
     config.module.rules.push({
       test: /\.g\.md$/,
       use:[
