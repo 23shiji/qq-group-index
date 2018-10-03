@@ -1,9 +1,10 @@
-<template>
-  <div id="app">
-    <template v-if="$store.state.tree">
-      <router-view/>
-    </template>
-  </div>
+<template lang="pug">
+#app.page-container
+  md-app
+    md-app-toolbar.md-primary
+      span.md-title 群索引
+    md-app-content(v-if="$store.state.tree")
+      router-view
 </template>
 <style lang="scss">
 #app {

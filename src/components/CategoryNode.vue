@@ -5,13 +5,16 @@
     template(v-if="!frozen")
       span(v-if="!expandedStatus") +
       span(v-if="expandedStatus")  -
-  .children-container(v-if="expandedStatus")
-    .group-container
+  div.children-container(v-if="expandedStatus")
+    md-list.group-container
       template(v-for="g in groups")
-        group-info(:group="g")
-    .category-container
-      template(v-for="c in node.children")
-        category-node(:node.sync="c")
+        md-list-item
+          group-info(:group="g")
+    div.md-layout
+      div.md-layout-item.md-size-5
+      .category-container.md-layout-item.md-size-95
+        template(v-for="c in node.children")
+          category-node(:node.sync="c")
 </template>
 
 <script lang="ts">

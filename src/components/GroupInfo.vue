@@ -1,7 +1,7 @@
 <template lang="pug">
-.group-info
+span.group-info.md-list-item-text
   router-link(:to="`/group/${group.id}`")
-    p {{group.name}}({{group.number}})
+    | {{group.name}}({{group.number}})
 </template>
 
 <script lang="ts">
